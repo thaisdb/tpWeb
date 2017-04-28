@@ -6,77 +6,66 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Cefet-MG TCC</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/principal.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Cefet-MG TCC</a>
+                    <a class="navbar-brand" href="#">Cefet - MG</a>
                 </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <form class="navbar-form navbar-right">
-                        <div class="form-group">
-                            <input type="text" placeholder="Email" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" placeholder="Password" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-success">Sign in</button>
-                    </form>
-                </div><!--/.navbar-collapse -->
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Agendamento</a></li>
+                    <li><a href="#">Avaliação</a></li>
+                    <li><a href="#">Agenda</a></li>
+                </ul>
             </div>
         </nav>
-        <div class="jumbotron">
+
+        <div class="jumbotron" id="agendamento">
             <div class="container">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
-                        <span class="label label-default">Marque essa caixa se você possui um Coorientador</span>
-                    </label>
+                <div class="checkbox text-center">
+
+                    <h4><label><input type="checkbox" id="cb-coorientador" value="option1">Marque essa caixa se você possui um Coorientador</label></h4>
                 </div>
-
-
-                <div class="form-group">
-                    <form>
-                        <div class="form-horizontal">
-                            <label for="exampleInputName2" class="col-sm-2 control-label">Aluno</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputName" placeholder="Nome">
-                            </div>
-                            <label for="exampleInputName2" class="col-sm-2 control-label">Título do Trabalho</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" rows="3"></textarea>
-                            </div>
+                <form>
+                    <div class="form-horizontal">
+                        <label for="exampleInputName2" class="col-sm-2 control-label">Aluno</label>
+                        <div class="col-sm-10"><input type="text" class="form-control" id="inputName" placeholder="Nome">
+                        </div>                            
+                        <label for="exampleInputName2" class="col-sm-2 control-label">Título do Trabalho</label>
+                        <div class="col-sm-10"><textarea class="form-control" rows="3"></textarea>
                         </div>
-                        <div class="form-inline">
+                        <div class="row">
                             <label for="exampleInputName2" class="col-sm-2 control-label">Data</label>
-                            <div class="col-sm-10">
-                                <input type="date" class="form-control" id="date-apresentacao">
-                                <label for="exampleInputEmail2">Horário</label>
-                                <input type="time" class="form-control" id="horario">
-                            </div>
-                            <label for="exampleInputName2">Local</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="exampleInputName2" placeholder="Numero do Prédio">
-                                <label for="exampleInputName2">Prédio</label>
-                                <input type="text" class="form-control" id="exampleInputName2" placeholder="Numero da Sala">
-                            </div>
+                            <div class="col-sm-4"><input type="date" class="form-control" id="date-apresentacao"></div>
+                            <label for="exampleInputEmail2" class="col-sm-2 control-label">Horário</label>
+                            <div class="col-sm-4"><input type="time" class="form-control" id="horario"></div>
                         </div>
-                    </form>
-                </div>            
-
-
+                        <div class="row">
+                            <label class="col-sm-2 control-label" for="exampleInputName2">Local</label>
+                            <div class="col-sm-4"><input type="text" class="form-control " id="exampleInputName2" placeholder="Numero da Sala"></div>
+                            <label for="exampleInputName2" class="col-sm-2 control-label">Prédio</label>
+                            <div class="col-sm-4"><input type="text" class="form-control" id="exampleInputName2" placeholder="Numero do Prédio"></div>
+                        </div>
+                        <label for="exampleInputName2" class="col-sm-2 control-label">Orientador</label>
+                        <div class="col-sm-10"><input type="text" class="form-control" id="inputName" placeholder="Nome"></div>
+                        <div id="box-coorientador" class="hidden">
+                            <label class="col-sm-2 control-label ">Coorientador</label>
+                            <div class="col-sm-10"><input type="text" class="form-control" id="inputName" placeholder="Nome"></div>
+                        </div>
+                        <label for="exampleInputName2" class="col-sm-2 control-label">Banca 1</label>
+                        <div class="col-sm-10"><input type="text" class="form-control" id="inputName" placeholder="Nome"></div>
+                        <label for="exampleInputName2" class="col-sm-2 control-label">Banca 2</label>
+                        <div class="col-sm-10"><input type="text" class="form-control" id="inputName" placeholder="Nome"></div>                         
+                    </div>
+                    <input class="btn btn-default" type="submit" value="Submit">
+                </form>
             </div>
         </div>
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
