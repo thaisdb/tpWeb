@@ -1,10 +1,11 @@
 function navSection() {
-    let ativos = document.getElementsByClassName('active');
-    for (let i = 0; i < ativos.length; i++) {
-        if (ativos[i].classList.contains('container'))
-            ativos[i].classList.add('hidden');
-        ativos[i].classList.remove('active');
-    }
+    let ativo = document.querySelector('#myNavBar .active');
+    console.log(ativo);
+    ativo.classList.remove('active');
+    ativo = document.getElementById(ativo.firstChild.dataset.section);
+    console.log(ativo);
+    ativo.classList.add('hidden');
+    ativo.classList.remove('active');
     event.target.parentNode.classList.add('active');
     document.getElementById(event.target.dataset.section).classList.add('active');
     document.getElementById(event.target.dataset.section).classList.remove('hidden');
