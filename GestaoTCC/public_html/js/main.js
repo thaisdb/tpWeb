@@ -1,3 +1,6 @@
+
+
+
 function navSection() {
     let ativo = document.querySelector('#myNavBar .active');
     console.log(ativo);
@@ -22,5 +25,27 @@ coorientador.addEventListener('click', function () {
         document.getElementById('box-coorientador').classList.remove('hidden');
     } else
         document.getElementById('box-coorientador').classList.add('hidden');
+});
+
+var events = [
+    
+];
+
+
+var calendar = $('#calendar').fullCalendar({
+    selectable: true,
+    select: function(start, end, allDay) {
+        var title = prompt('New event:');
+        if (title) {
+            calendar.fullCalendar('renderEvent', {
+                title   : title,
+                start   : start,
+                end     : end,
+                allDay  : allDay
+            },
+            true);
+        }
+        calendar.fullCalendar('unselect');
+    }
 });
 

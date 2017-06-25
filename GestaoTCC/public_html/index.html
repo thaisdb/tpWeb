@@ -12,8 +12,9 @@ and open the template in the editor.
         <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
         <title>Cefet-MG TCC</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="../node_modules/fullcalendar/dist/fullcalendar.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
-    </head>
+     </head>
     <body>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -37,8 +38,7 @@ and open the template in the editor.
         </nav>
 
         <div class="container active" id="home">
-
-        </div>
+            <div id="calendar"></div>
         <div class="container container-fluid hidden" id="agendamento">
             <form>
                 <div class="form-horizontal">
@@ -77,13 +77,18 @@ and open the template in the editor.
             </form>
         </div>
         <div class="container hidden" id="agenda">
-
         </div>
         <div class="container hidden" id="avaliacao">
 
         </div>        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        
+        <script src="../node_modules/moment/moment.js"></script>
+        <script src="../node_modules/underscore/underscore.js"></script>
+        <script src="../node_modules/fullcalendar/dist/fullcalendar.js"></script>
+        
         <script src="js/main.js"></script>
+        
     </body>
 </html>
